@@ -40,7 +40,7 @@ public class DefaultPlaidPublicClient implements PlaidPublicClient {
 
     @Override
     public LongTailInstitutionsResponse getAllLongTailInstitutions(Integer offset, Integer count) {
-        PlaidHttpRequest request = new PlaidHttpRequest("/institutions/longtail");
+        PlaidHttpRequest request = new PlaidHttpRequest("/institutions/all");
 
         if(StringUtils.isEmpty(clientId) || StringUtils.isEmpty(secret)) {
             throw new PlaidClientsideException("ClientId and Secret is required");
